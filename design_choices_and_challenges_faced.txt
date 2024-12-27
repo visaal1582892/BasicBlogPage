@@ -1,0 +1,11 @@
+Design Choices:
+
+1. For responsive design I used flex containers and for providing widths and heights to elements I used relative units.
+2. Used media queries to develop it for different types of devices.
+3. Used gradient colors for good and dynamic look.
+4. Used good single page navigation for easy navigation among different sections in my web page.
+
+Challenge Faced:
+
+1. I gaced the challenges mainly during weights and heights assigning for the elements. Initially I used px units for providing the widths which failed giving responsive design. So I changes all units to percentages.
+2. Another main Challenge is faced during media queries which are vey confusing. But Finally I developed a responsive website.

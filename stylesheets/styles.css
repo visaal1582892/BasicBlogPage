@@ -1,0 +1,594 @@
+
+/* Universal Selector */
+*{
+    box-sizing: border-box;
+}
+
+/* Selecting entire html  */
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    scroll-padding-top: 40px;
+    scroll-behavior: smooth;
+    animation: delayDisplay 1.5s ease-in-out;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Animation for entire html document to display with some delay*/
+@keyframes delayDisplay {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Selecting body element */
+body{
+    color: rgb(72, 70, 70);
+    margin: 0;
+    background: radial-gradient(rgb(246, 201, 240) 50%, rgb(161, 198, 236));
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+}
+
+/* Selecting all the headings at a time */
+h1, h2, h3, h4{
+    color: rgb(10, 58, 114);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Selecting header component in body */
+#header{
+    background: linear-gradient(130deg, #f06363 30%, #9e1983);
+    text-align: center;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/* Selecting main heading in header */
+#header>h1{
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Selecting caption in the header */
+#header>small{
+    display: block;
+    text-align: right;
+    font-size: 100%;
+    color: #eaf5f6;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+/* Selecting entire navbar */
+#navbar{
+    background-color: rgb(252, 216, 216);
+    margin: 0px;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0px 4px 10px rgb(113, 113, 113);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 110%;
+}
+
+/* Selecting the unordered list in navbar */
+#navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+/* Selecting all the individual elements in the list */
+#navbar>ul>li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15%;
+    position: relative;
+}
+
+#navbar .dropdown{
+    display: none;
+    position: absolute;
+    flex-flow: column nowrap;
+    width: auto;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: rgb(252, 216, 216);
+    list-style: none;
+    top: 100%;
+}
+
+/* Styling the navigation links in the navbar */
+#navbar a{
+    text-decoration: none;
+    color: rgb(78, 78, 243);
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    transition: color 0.3s;
+}
+
+
+/* Giving all the pseudo class effects for the links */
+#navbar a:hover, #navbar a:active, #navbar a:focus{
+    color: #ff0000;
+}
+
+.nested{
+    pointer-events: none;
+    cursor: default;
+}
+
+#navbar li:hover .dropdown,
+#navbar li:focus-within .dropdown{
+    display: flex;
+    list-style-type: circle;
+}
+
+/* Selecting entire main component */
+#main{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1.5%;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Selecting All the articles or posts in the main component */
+#main>article{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.214);
+    border-radius: 20px;
+    padding: 0.5% 1%;
+    margin: 0.5% 0.25% 2%;
+    box-shadow: 2px 2px 10px rgb(113, 113, 113), -2px -2px 10px rgb(113, 113, 113);
+    width: 100%;
+}
+
+/* Selecting the individual elements of the intro section */
+#intro>blockquote{
+    animation: blink 5s linear alternate-reverse infinite both;
+    font-weight: bold;
+}
+
+#intro>figure{
+    display: flex;
+    width: 100%;
+    height: 21vw;
+    box-shadow: 4px 4px 10px rgb(113, 113, 113);
+    border-radius: 20px;
+}
+
+#intro>figure>img{
+    height: 22vw;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Applying the blinking animation for Intro caption */
+@keyframes blink {
+    25%{
+        color: rgb(234, 32, 32);
+    }
+    50%{
+        color: rgb(233, 169, 49);
+    }
+    75%{
+        color: rgb(0, 0, 139);
+    }
+    100%{
+        color: rgb(255, 105, 180);
+    }
+}
+
+/* Selecting the entire main component */
+#main{
+    width: 100%;
+}
+
+#main h2{
+    width: fit-content;
+    padding: 0.5%;
+    border-radius: 20px;
+    border: 7px double rgb(78, 78, 243);
+    box-shadow: 2px 2px 6px rgb(113, 113, 113), -2px -2px 6px rgb(113, 113, 113);
+    background: radial-gradient(#ee9696 30%, #9e6493);
+}
+
+/* Styling the overview sections of all the articles */
+.overview{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 100%;
+}
+
+.overview>.overviewPicture{
+    width: 40%;
+}
+
+.overview>.overviewPicture>img{
+    width: 100%;
+    box-shadow: 3px 3px 7px rgb(113, 113, 113);
+    border-radius: 15px;
+}
+
+.overview>.overviewContent{
+    width: 60%;
+}
+
+/* Selecting the highlights of all the articles */
+.highlights{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.highlights>.highlightsVideo{
+    width: 40%;
+}
+
+.highlights>.highlightsVideo>video{
+    width: 100%;
+    box-shadow: 3px 3px 7px rgb(113, 113, 113);
+    border-radius: 15px;
+}
+
+.highlights>.highlightsContent{
+    width: 60%;
+}
+
+/* Selecting entire aside component */
+#aside{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1.5%;
+    font-weight: 400;
+    width: 100%;
+}
+
+/* Styling the about component in aside */
+#aside>#about{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.214);
+    border-radius: 5px;
+    padding: 0.5% 1%;
+    margin: 0.5% 0.25% 2%;
+    box-shadow: 1px 1px 5px rgb(113, 113, 113);
+    width: 100%;
+}
+
+aside>#about>figure{
+    width: 20%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+#aside>#about>figure>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+#aside>#about>#aboutContent{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 70%;
+}
+
+/* Styling the contact component in aside */
+#aside>#contact{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.214);
+    border-radius: 5px;
+    padding: 0.5% 1%;
+    margin: 0.5% 0.25% 2%;
+    box-shadow: 1px 1px 5px rgb(113, 113, 113);
+    width: 100%;
+    height: auto;
+}
+
+/* Styling Suggestion Box in contact component */
+#aside>#contact>#suggestionBox{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    width: 30%;
+    border: 5px double rgb(224, 167, 222);
+    height: auto;
+    margin: 0% 2%;
+}
+
+#aside>#contact>#suggestionBox>legend{
+    color: rgb(10, 58, 114);
+}
+
+/* Styling the form in Suggestion box */
+#aside>#contact>#suggestionBox>#form{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 1rem;
+}
+
+#aside>#contact>#suggestionBox>#form>input{
+    height: 10%;
+    border-radius: 10px;
+    background-color: #ffffff98;
+    padding: 2%;
+    border: none;
+}
+
+#aside>#contact>#suggestionBox>#form>textarea{
+    height: 30%;
+    border-radius: 15px;
+    background-color: #ffffff8f;
+    padding: 2%;
+    border: none;
+    resize: vertical;
+    min-height: 6rem;
+}
+
+#aside>#contact>#suggestionBox>#form>input:focus{
+    outline: none;
+    border: 2px solid rgb(78, 78, 243);
+}
+
+#aside>#contact>#suggestionBox>#form>textarea:focus{
+    outline: none;
+    border: 2px solid rgb(78, 78, 243);
+}
+
+/* Styling submit button in form */
+#aside>#contact>#suggestionBox>#form>.button{
+    align-self: center;
+    width: 25%;
+    height: 12%;
+    font-family: inherit;
+    margin: 4% 0% 0%;
+    background: linear-gradient(130deg, #ea7979 30%, #a55b97);
+    box-shadow: 2px 2px 6px rgb(113, 113, 113);
+    font-size: large;
+    transition: transform 0.5s;
+}
+
+/* Styling all pseudo classes of a button */
+#aside>#contact>#suggestionBox>#form>.button:hover{
+    transform: scale3d(1.05,1.05,1.05);
+}
+
+#aside>#contact>#suggestionBox>#form>.button:active{
+    transform: scale3d(1,1,1);
+}
+
+#aside>#contact>.contactDetails{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+}
+
+#aside>#contact>.contactDetails>figure{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#aside>#contact>.contactDetails>figure>a>img{
+    width: 30%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 10px rgb(113, 113, 113), -3px -3px 10px rgb(113, 113, 113);
+    transition: transform 0.5s;
+}
+
+#aside>#contact>.contactDetails>figure>a>img:hover{
+    transform: scale3d(1.2,1.2,1.2);
+}
+
+/* Styling the footer component */
+#footer{
+    background-color: rgb(252, 216, 216);
+    margin: 0px;
+    box-shadow: 0px 4px 10px rgb(113, 113, 113);
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(78, 78, 243);
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 110%;
+}
+
+/* Adding the media queries for responsive design */
+
+/* Increasing widths of images and videos below 800px width */
+@media screen and (max-width: 800px){
+    #main{
+        font-size: medium;
+    }
+
+    #aside{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 680px){
+    html{
+        scroll-padding-top: 0px;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    #navbar{
+        background-color: rgb(252, 216, 216);
+        margin: 0px;
+        border: 1px solid #bbbbbb;
+        box-shadow: 0px 4px 10px rgb(113, 113, 113);
+        position: fixed;
+        top: 90%;
+        width: 80%;
+        height: 8%;
+        border-radius: 20px;
+        opacity: 0.9;
+        font-size: 80%;
+        justify-content: space-between;
+        z-index: 1000;
+        transition: top 0.3s ease-in-out;
+    }
+
+    #navbar li {
+        position: relative;
+    }
+
+    #navbar .dropdown{
+        display: none;
+        position: absolute;
+    }
+
+    #navbar li:hover .dropdown,
+    #navbar li:focus-within .dropdown {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: -650%;
+        background-color: rgb(252, 216, 216);
+        width: auto;
+        border-radius: 10px;
+        list-style-type: circle;
+    }
+}
+
+    @media screen and (max-width: 600px) {
+        #main{
+            font-size: small;
+        }
+
+        #aside{
+            font-size: small;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        #aside>#about{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.214);
+            border-radius: 5px;
+            padding: 0.5% 1%;
+            margin: 0.5% 0.25% 2%;
+            box-shadow: 1px 1px 5px rgb(113, 113, 113);
+            width: 100%;
+        }
+
+        #intro>figure{
+            display: flex;
+            width: 100%;
+            height: 30vw;
+            box-shadow: 4px 4px 10px rgb(113, 113, 113);
+            border-radius: 20px;
+        }
+
+        .overview{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .overview>.overviewPicture{
+            width: 85%;
+        }   
+        
+        .overview>.overviewContent{
+            width: 100%;
+        }
+
+        .highlights{
+            display: flex;
+            flex-flow: column-reverse;
+            align-items: center;
+        }
+
+        .highlights>.highlightsVideo{
+            width: 85%;
+        }
+
+        .highlights>.highlightsContent{
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        #navbar ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            gap: 8%;
+        }
+        
+        /* Selecting all the individual elements in the list */
+        #navbar>ul>li{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+
+
+
+
